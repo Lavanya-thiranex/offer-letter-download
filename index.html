@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thiranex | Offer Letter Download</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" href="logo.png"/>
   <style>
     * {
@@ -19,7 +20,7 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
+    
     header {
       text-align: center;
       padding: 20px;
@@ -100,6 +101,48 @@
       font-size: 14px;
       color: #475569;
     }
+    .whatsapp-assist {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-assist:hover {
+  background-color: #1da955;
+}
+
+.whatsapp-assist i {
+  font-size: 20px;
+}
+
+/* Hide text on small screens */
+@media (max-width: 480px) {
+  .assist-text {
+    display: none;
+  }
+
+  .whatsapp-assist {
+    padding: 12px;
+    border-radius: 50%;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -121,21 +164,51 @@
   </main>
 
   <footer>
-    © <span id="year"></span> Thiranex Pvt Ltd. All rights reserved.
+    © <span id="year"></span> Thiranex. All rights reserved.
   </footer>
 
   <script>
     // Replace with actual intern data
     const offerLetterLinks = {
-      'INT123': {
-        mobile: '9876543210',
-        url: 'https://drive.google.com/file/d/1gRtcDJAHWwBkagCPTrnNAD7cwe3OUchg/view?usp=drive_link'
-      },
-      'INT456': {
-        mobile: '9123456789',
-        url: 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2'
-      }
-    };
+  '2506001': { mobile: '7305727048', url: 'https://drive.google.com/file/d/1bWHj530mtl2wjCfqUgdzsqQgT9Zm928X/view' },
+  '2506002': { mobile: '7904668418', url: 'https://drive.google.com/file/d/1yyXWJqCcUC7vb6ZipKpNLwTy7km8fa_2/view' },
+  '2506003': { mobile: '9344536252', url: 'https://drive.google.com/file/d/1IFSN2-NnjCRdLcNCYMYK2X_U_5uNQ22J/view' },
+  '2506004': { mobile: '7200073845', url: 'https://drive.google.com/file/d/13zf___GUZe90Rlfkvtz8CD6uvwLDnr4q/view' },
+  '2506005': { mobile: '9363215967', url: 'https://drive.google.com/file/d/1sa4qUD_QFK2QqrqueEk0aqg1SoDwb6xX/view' },
+  '2506006': { mobile: '9342400566', url: 'https://drive.google.com/file/d/1YLyIajOO1lwFBWQgqj0vAiu5cJ2fUo7v/view' },
+  '2506007': { mobile: '8825988524', url: 'https://drive.google.com/file/d/1Y21_0X2IxW9nLk0rJZ_-llc_--pwbWJe/view' },
+  '2506008': { mobile: '9585311222', url: 'https://drive.google.com/file/d/14lccaUBVu-_qgtV6S_CMRMruapMTQZCc/view' },
+  '2506009': { mobile: '8072386401', url: 'https://drive.google.com/file/d/1Nl_IfnhGsOPOKE1HHvP2MM873U8G0WXK/view' },
+  '2506010': { mobile: '7305579225', url: 'https://drive.google.com/file/d/1TD0ZK5BkozkZheg5zM-gwVBePJTkLma5/view' },
+  '2506011': { mobile: '9944783503', url: 'https://drive.google.com/file/d/1prNuGzwPFlT7Yt1BiGWM6ZN7-15NH03z/view' },
+  '2506012': { mobile: '9092405276', url: 'https://drive.google.com/file/d/11CkxSVJauJXVJoZUX6N7y4Y6rNv1A0_Z/view' },
+  '2506013': { mobile: '9840950514', url: 'https://drive.google.com/file/d/1QQXF5d5nnA7nSCi-6u4-mkqxq1gx2rve/view' },
+  '2506014': { mobile: '9791317453', url: 'https://drive.google.com/file/d/1Ern2adgMbrw7sJAaFT4haAa1eOfJSjeu/view' },
+  '2506015': { mobile: '7339622787', url: 'https://drive.google.com/file/d/1VIV89nJ7z6gFTK8Xr_oz3hSGsxk-95Ye/view' },
+  '2506016': { mobile: '8438956278', url: 'https://drive.google.com/file/d/1yAKqSQ6DF3Po-J-AHZoShwCH5Z_7Moct/view' },
+  '2506017': { mobile: '9345314378', url: 'https://drive.google.com/file/d/1bH3EaEU7ix8yXxqb-NbsfVql6f7GyrZZ/view' },
+  '2506018': { mobile: '9042798660', url: 'https://drive.google.com/file/d/1IIfiNljkQHMLAIKcELxHUTaaVUGfW1AT/view' },
+  '2506019': { mobile: '9442575109', url: 'https://drive.google.com/file/d/1TAjAIANbbFLSDTbDiMqJ4ecYLvZh7PUS/view' },
+  '2506020': { mobile: '9360394539', url: 'https://drive.google.com/file/d/1NbITK7ATc0hcjKk7nf7vehpA0gH_k0K2/view' },
+  '2506021': { mobile: '9789479485', url: 'https://drive.google.com/file/d/16qBqlJ-Wo34QXfwFFpdGI6Y1kimEkK7m/view' },
+  '2506022': { mobile: '7845995224', url: 'https://drive.google.com/file/d/1HIZWnHdm6J88Arr0-isFFyJWvLdSZojb/view' },
+  '2506023': { mobile: '9941999415', url: 'https://drive.google.com/file/d/1prj9O4LsgiPzCg38rzAiO6spes2BSZ2i/view' },
+  '2506024': { mobile: '9600024053', url: 'https://drive.google.com/file/d/1X9jhpgYio8NQZUHNqSllh_44YDlYF_G1/view' },
+  '2506025': { mobile: '9025893211', url: 'https://drive.google.com/file/d/1REQJs4drjG7wBHscB9bC3yYlh4nB1f0p/view' },
+  '2506026': { mobile: '9445418977', url: 'https://drive.google.com/file/d/1xfgrmdskG3seXvC8bhlVI26ma2NvDJZo/view' },
+  '2506027': { mobile: '7548817127', url: 'https://drive.google.com/file/d/1zcLYPG6uIAXhTS-8cAjjv08-gv43rrtD/view' },
+  '2506028': { mobile: '9080960026', url: 'https://drive.google.com/file/d/1bgtuRJUx-EEs7ao3D27dm74ehUfemRGF/view' },
+  '2506029': { mobile: '7603822387', url: 'https://drive.google.com/file/d/1Bo0aX0DjdVL1xf8yX568a9AU2DbnE4yw/view' },
+  '2506030': { mobile: '9361639726', url: 'https://drive.google.com/file/d/1kF5nCs-zz7vvtNJBDh_rvfqd5icZmnWW/view' },
+  '2506031': { mobile: '9790651634', url: 'https://drive.google.com/file/d/1W62_W7FxduvwEml0slEsPEfCSnkGkzBQ/view' },
+  '2506032': { mobile: '8667429013', url: 'https://drive.google.com/file/d/1LEplDAmPLEY6eEjSS9spGcAHNXfY8Y0-/view' },
+  '2506033': { mobile: '8925722699', url: 'https://drive.google.com/file/d/1qUjMjSfwb7rBleYS4hgMA6fGr3s6fpm3/view' },
+  '2506034': { mobile: '9840544299', url: 'https://drive.google.com/file/d/1aFGMnkyh0KgZFeORUGSK0KkPwhAZipLX/view' },
+  '2506035': { mobile: '9787257026', url: 'https://drive.google.com/file/d/1WwBqCyCkYE1tufgMjAzzjkcZagpwmgO7/view' }
+};
+
+      
+    
 
     function handleSubmit(event) {
       event.preventDefault();
@@ -153,6 +226,10 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+    <a href="https://wa.me/message/R4PHXDH6IAMWE1" target="_blank" class="whatsapp-assist" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="assist-text">Need help? Chat with us</span>
+    </a>
 
 </body>
 </html>
