@@ -1,259 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thiranex | Offer Letter Download</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="icon" href="logo.png"/>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0f2fe, #f0f9ff);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #ffffff;
-      color: white;
-    }
-
-    header img {
-      height: 60px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    .form-container {
-      background-color: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 450px;
-    }
-
-    .form-container h2 {
-      text-align: center;
-      color: #1e3a8a;
-      margin-bottom: 24px;
-      font-size: 24px;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      background-color: #0846f0;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    button:hover {
-      background-color: #2563eb;
-    }
-
-    .error {
-      color: red;
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      background-color: #f1f5f9;
-      font-size: 14px;
-      color: #475569;
-    }
-    .whatsapp-assist {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 12px 18px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-}
-
-.whatsapp-assist:hover {
-  background-color: #1da955;
-}
-
-.whatsapp-assist i {
-  font-size: 20px;
-}
-
-/* Hide text on small screens */
-@media (max-width: 480px) {
-  .assist-text {
-    display: none;
-  }
-
-  .whatsapp-assist {
-    padding: 12px;
-    border-radius: 50%;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-  }
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiranex - Offer Letter Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 180px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        p {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+        
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .message {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        .download-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .download-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #95a5a6;
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo.png" alt="Thiranex Logo" />
-  </header>
-
-  <main>
-    <div class="form-container">
-      <h2>Download Your Offer Letter</h2>
-      <form onsubmit="handleSubmit(event)">
-        <input type="text" id="internId" placeholder="Enter Intern ID" required />
-        <input type="text" id="mobile" placeholder="Enter Mobile Number" required />
-        <div id="error" class="error"></div>
-        <button type="submit">Download Now</button>
-      </form>
+    <div class="container">
+        <img src="logo.png" alt="Thiranex Logo" class="logo">
+        <h1>Offer Letter Download Portal</h1>
+        <p>Enter your registered email address to download your offer letter</p>
+        
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your.email@example.com" required>
+        </div>
+        
+        <button id="submit-btn">Download Offer Letter</button>
+        
+        <div id="message" class="message"></div>
+        
+        <footer>
+            &copy; 2023 Thiranex. All rights reserved.
+        </footer>
     </div>
-  </main>
 
-  <footer>
-    © <span id="year"></span> Thiranex. All rights reserved.
-  </footer>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const email = document.getElementById('email').value.trim();
+            const messageDiv = document.getElementById('message');
+            
+            // Reset message div
+            messageDiv.className = 'message';
+            messageDiv.innerHTML = '';
+            
+            // Validate email
+            if (!email) {
+                showError('Please enter your email address');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showError('Please enter a valid email address');
+                return;
+            }
+            
+            // Show loading state
+            this.textContent = 'Searching...';
+            this.disabled = true;
+            
+            // In a real implementation, this would call your backend service
+            // which would check Google Drive for the offer letter
+            simulateApiCall(email)
+                .then(response => {
+                    if (response.success) {
+                        showSuccess(`Offer letter found for ${email}`);
+                        const link = document.createElement('a');
+                        link.href = response.downloadUrl;
+                        link.className = 'download-link';
+                        link.textContent = 'Click here to download your offer letter';
+                        link.target = '_blank';
+                        messageDiv.appendChild(document.createElement('br'));
+                        messageDiv.appendChild(link);
+                    } else {
+                        showError(response.message || 'No offer letter found for this email address');
+                    }
+                })
+                .catch(error => {
+                    showError('An error occurred. Please try again later.');
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    this.textContent = 'Download Offer Letter';
+                    this.disabled = false;
+                });
+        });
+        
+        function showError(message) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.className = 'message error';
+            messageDiv.textContent = message;
+        }
+        
+        function showSuccess(message) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.className = 'message success';
+            messageDiv.textContent = message;
+        }
+        
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Simulate API call to backend
+        function simulateApiCall(email) {
+            return new Promise((resolve) => {
+                // Simulate network delay
+                setTimeout(() => {
+                    // This is a simulation - in a real app, you would:
+                    // 1. Call your backend service with the email
+                    // 2. Your backend would check Google Drive for a matching offer letter
+                    // 3. Return the download URL if found
+                    
+                    // For demo purposes, we'll pretend some emails have offer letters
+                    const demoData = {
+                       'samvelsam133@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1IInpsRlgsN03g0zyfmCnV-9d8wzCWNGv'
+},
+'syedabdussamadtech@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1mb1rt9_oNiliuJ2KxGiGb7p6l315ohvm'
+},
+'jordabhi@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1GDRXypvZOnXotsE6hqk9Nwd5KDXtCXa7'
+},
+'2416167@saec.ac.in': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=17tVmVHv163u6ZnhN5XoIBZJdtsyW4t0h'
+},
+'abudujana0209@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1YPcoH4AjuCyPGDdvtWsBjpNQIQpmztun'
+},
+'rajesht.res07@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=16_gOJUZWw8n-nJyKXNt0coyNzSQG05us'
+},
+'mahat3306@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1EQLpv4rIJyyOxfUJE5NFMUgFZCRWbQ7J'
+},
+'rdharunn@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1uiZ7gjL1I1QtqYAg_FPrzhtxmg3r8E0I'
+},
+'kaviyashreea8906@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1zUFLn1dONklAgA1TKPrXNMeUKgclPSTW'
+},
+'monidev74@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1W9o1B0RiNGC6s8nDKNlQ99bFMURkolic'
+},
+'spmohanesh@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=10lRp58klAsSTyo9ziZGDHF4Vg0gNTp3O'
+},
+'nagulan542004@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1GQubMuvY4foMrcocGai21fH9jAugLYd2'
+},
+'malathi280404@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1KZZC5Q-de1TN3NbiaBW9t-EJT1qTxudp'
+},
+'jessijhem@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1HigUb2RmFt7vv6N--vlEZBk0k9tpGVXt'
+},
+'lithikaganapathy@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1k5zKFS_yTHQaUlSaPQiZs8a4fDWnWcIk'
+},
+'2416167@saec.ac.in (duplicate)': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1CmqX2aWEOfWLhvJBBmxbXHd60s4AQwA_'
+},
+'anithaustian78@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1bbPomPOdkrDVaXYxgmTmhu6k0Zjor7tF'
+},
+'papu01112005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=13XL4mTUTL-3qU9ze3zTLvyeb3kz7BO8g'
+},
+'subhajitdas7439251991@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1A4g_nm9ntK9-bCMrYHmPbo-64dpgUAdL'
+},
+'nkdebnath4@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=186Wscusg-ehu6zVtEiny0tY-Ot6cR4ht'
+},
+'angelmary7761@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1LSVvjkwaVdoDlA0JglaygcUdH82jfae-'
+},
+'daspriyangshu400@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=12Q31SvdOHXhfl9mmeKynjoIeaTw2Bupo'
+},
+'subhadeepdassubhadeepdas42@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1lxc5xroAj9EXRabvO0jZxCGqQoWigEpY'
+},
+'geethasivaraman2216@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1SldWxp_AOmFk8tVP6Zn07ZpmpqqE1M-z'
+},
+'ayushk0208@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1Xgloq-f4cQphCKumgxcthvMj2-jo7Ol8'
+},
+'nandhinirameshmala@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1S7E119GpNHkRBBfqSOf7PvpFlPXEzMNO'
+},
+'agalyamurali1515@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1wYpaeRoq4ifmj8DZOPOadEsxpRn5xojA'
+},
+'suji18343@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1xpEHI7A58V-YWQ2Qx35750xa3FopWHtI'
+},
+'anbarasi474@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=16GsHxv3QNp-ivdejsV-Z1UYkPGMt0D7m'
+},
+'maliniraja8072@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=14E_8oqGS9yu2lI6JeK-tE3jzSzB5O4NW'
+},
+'vishwaprem335@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1bNWT23vChTTlbyON29_16uZJRv8LDsmV'
+},
+'yuvashree21062005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1rn95jzDzsgMMaXHDocS6g-etummhcDiX'
+},
+'anitha05022005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1uSR4V9rGhUGJrnJJ5CJojPbFHgfNCm-R'
+},
+'gayathrisoniya1005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1zIt4cI5lHpb0h3X2Sn3McdA5YsI1PtQT'
+},
+'pabisha200@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1sOT2Q5QMZC6plt7pQuVRCTzX02Zmg9pT'
+},
+'thrishkumar7@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1sabISCu9oDRpOkxqZwFwSKMcyo4qEVSY'
+},
+'aishuuu0408@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1tM5gUq2TbGGdhraBr9LRbK675EF6BA0w'
+},
+'sathishswag54321@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1SGgauMBovgVB_pYkjIvxIuhgD5_zWxYw'
+},
+'vpriyanka4032@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1k5Vo0qYkDIktGc07eAbkCReO-ocJ3qyM'
+},
+'sushmasudhagar1718@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1ndDwGYyN1L0G1J_JGZxsYirQtDC1lLdI'
+},
+'mirudhuladina@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1ra1xaTFLxSMRdnhPQcA4biY-adBE3dbv'
+},
+'kumaramuthu003@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1wr6ERo0uBnTJYvIYkHi4VqmiLWeS7vUR'
+},
+'perarasuperarasu107@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1EgXPn-2SIsBTEUJBrCCN4IlcF1GVJBst'
+},
+'jayaramesh784@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1sAeXFdQIVHF8qwri73xXLbBelE1SsFpC'
+},
+'jananiiprabakaran@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1HtL7u_xF7VPwL5WTHaz--h9KhtlUDf_M'
+},
+'gsanthanamari89@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1OTqCZ9cyZgV_Ga_c3yfW80O2j4cXWmrc'
+},
+'nandhini040707@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1dPf7RZDBOStEF_xh80xxWDYi5baD5rFV'
+},
+'balajiguru449@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=10Ims7cSBzTw4aGnxBZfBwG3w0GwE9Bn0'
+},
+'kaviyaa292003@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1okk6kTV463APZFbCGm2Hzxlv3EGDbjBe'
+},
+'tamilvanandhandapani@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1q4yxM9t97Kt8sbq9fLh-EMf3iCD_ONvJ'
+},
+'esakkiammalramasamy44@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1GunbGi1QZbWIoaEhrXHvcOcWXdg-rjeL'
+},
+'rakeshmohan2005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1UzCLb59AMJk4oDfLqqW0k83tHg0m16xm'
+},
+'abishek110105@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1zT3jnigh4z8cgxWMnTCzsY1iSm2Mp1y3'
+},
+'cherin260104@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1iQKjENa0yseSZzFS5BhHd3inNAerhK6g'
+},
+'gwth2004@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1YyB-fmQt2MNoQxbp6NIlv16m_K7fb7KG'
+},
+'snaveenaa2005@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=1ZjW-ja_HJAVEx8KIbLq5BO-oXMXMtlqk'
+},
+'gayathri3.cpt@gmail.com': {
+  success: true,
+  downloadUrl: 'https://drive.google.com/uc?export=download&id=10SvJyaZVKVqIuQ9BydqbogPRTGTNKeG3'
+},
+'vishalsharma840038@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1BfC6_sNPLTd3zD6mvaOUlZhpyyKUXp0u'
+},
+'alpeshrp09@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1bR6GkWfZ_Dq1t2pQI8MEcToemVranrZd'
+},
+'sandeepsharma.workspace@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1UaY8CDjnv6iv2_iWunvJTvy8GBuW7VWa'
+},
+'namepallyv@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1jwtiuSrEEUuHgTC-RwIEsIPVCzykgAay'
+},
+'chatlapravalika07@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1E6Q5aHPqWP6mqr68LjrUwPmUKdfW8JHx'
+},
+'S': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1CljCM8EDUd1xR6l1zqLr2HKtJ4e2RMUd'
+},
+'gharkeram55@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=10LRpOQJjRN-kl_wcVIy7KXqGhYw7ODOE'
+},
+'dsaranya824@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1bJdgu4W3pNfqA7ENsyaqCnieDFf_RWO3'
+},
+'izhaanzia@gmail.com': {
+    success: true,
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1bYxNHV2TEjupD4Cjg13WO0IrMIbQnJzC'
+}
 
-  <script>
-    // Replace with actual intern data
-    const offerLetterLinks = {
-  '2506001': { mobile: '7305727048', url: 'https://drive.google.com/file/d/1bWHj530mtl2wjCfqUgdzsqQgT9Zm928X/view' },
-  '2506002': { mobile: '7904668418', url: 'https://drive.google.com/file/d/1yyXWJqCcUC7vb6ZipKpNLwTy7km8fa_2/view' },
-  '2506003': { mobile: '9344536252', url: 'https://drive.google.com/file/d/1IFSN2-NnjCRdLcNCYMYK2X_U_5uNQ22J/view' },
-  '2506004': { mobile: '7200073845', url: 'https://drive.google.com/file/d/13zf___GUZe90Rlfkvtz8CD6uvwLDnr4q/view' },
-  '2506005': { mobile: '9363215967', url: 'https://drive.google.com/file/d/1sa4qUD_QFK2QqrqueEk0aqg1SoDwb6xX/view' },
-  '2506006': { mobile: '9342400566', url: 'https://drive.google.com/file/d/1YLyIajOO1lwFBWQgqj0vAiu5cJ2fUo7v/view' },
-  '2506007': { mobile: '8825988524', url: 'https://drive.google.com/file/d/1Y21_0X2IxW9nLk0rJZ_-llc_--pwbWJe/view' },
-  '2506008': { mobile: '9585311222', url: 'https://drive.google.com/file/d/14lccaUBVu-_qgtV6S_CMRMruapMTQZCc/view' },
-  '2506009': { mobile: '8072386401', url: 'https://drive.google.com/file/d/1Nl_IfnhGsOPOKE1HHvP2MM873U8G0WXK/view' },
-  '2506010': { mobile: '7305579225', url: 'https://drive.google.com/file/d/1TD0ZK5BkozkZheg5zM-gwVBePJTkLma5/view' },
-  '2506011': { mobile: '9944783503', url: 'https://drive.google.com/file/d/1prNuGzwPFlT7Yt1BiGWM6ZN7-15NH03z/view' },
-  '2506012': { mobile: '9092405276', url: 'https://drive.google.com/file/d/11CkxSVJauJXVJoZUX6N7y4Y6rNv1A0_Z/view' },
-  '2506013': { mobile: '9840950514', url: 'https://drive.google.com/file/d/1QQXF5d5nnA7nSCi-6u4-mkqxq1gx2rve/view' },
-  '2506014': { mobile: '9791317453', url: 'https://drive.google.com/file/d/1Ern2adgMbrw7sJAaFT4haAa1eOfJSjeu/view' },
-  '2506015': { mobile: '7339622787', url: 'https://drive.google.com/file/d/1VIV89nJ7z6gFTK8Xr_oz3hSGsxk-95Ye/view' },
-  '2506016': { mobile: '8438956278', url: 'https://drive.google.com/file/d/1yAKqSQ6DF3Po-J-AHZoShwCH5Z_7Moct/view' },
-  '2506017': { mobile: '9345314378', url: 'https://drive.google.com/file/d/1bH3EaEU7ix8yXxqb-NbsfVql6f7GyrZZ/view' },
-  '2506018': { mobile: '9042798660', url: 'https://drive.google.com/file/d/1IIfiNljkQHMLAIKcELxHUTaaVUGfW1AT/view' },
-  '2506019': { mobile: '9442575109', url: 'https://drive.google.com/file/d/1TAjAIANbbFLSDTbDiMqJ4ecYLvZh7PUS/view' },
-  '2506020': { mobile: '9360394539', url: 'https://drive.google.com/file/d/1NbITK7ATc0hcjKk7nf7vehpA0gH_k0K2/view' },
-  '2506021': { mobile: '9789479485', url: 'https://drive.google.com/file/d/16qBqlJ-Wo34QXfwFFpdGI6Y1kimEkK7m/view' },
-  '2506022': { mobile: '7845995224', url: 'https://drive.google.com/file/d/1HIZWnHdm6J88Arr0-isFFyJWvLdSZojb/view' },
-  '2506023': { mobile: '9941999415', url: 'https://drive.google.com/file/d/1prj9O4LsgiPzCg38rzAiO6spes2BSZ2i/view' },
-  '2506024': { mobile: '9600024053', url: 'https://drive.google.com/file/d/1X9jhpgYio8NQZUHNqSllh_44YDlYF_G1/view' },
-  '2506025': { mobile: '9025893211', url: 'https://drive.google.com/file/d/1REQJs4drjG7wBHscB9bC3yYlh4nB1f0p/view' },
-  '2506026': { mobile: '9445418977', url: 'https://drive.google.com/file/d/1xfgrmdskG3seXvC8bhlVI26ma2NvDJZo/view' },
-  '2506027': { mobile: '7548817127', url: 'https://drive.google.com/file/d/1zcLYPG6uIAXhTS-8cAjjv08-gv43rrtD/view' },
-  '2506028': { mobile: '9080960026', url: 'https://drive.google.com/file/d/1bgtuRJUx-EEs7ao3D27dm74ehUfemRGF/view' },
-  '2506029': { mobile: '7603822387', url: 'https://drive.google.com/file/d/1Bo0aX0DjdVL1xf8yX568a9AU2DbnE4yw/view' },
-  '2506030': { mobile: '9361639726', url: 'https://drive.google.com/file/d/1kF5nCs-zz7vvtNJBDh_rvfqd5icZmnWW/view' },
-  '2506031': { mobile: '9790651634', url: 'https://drive.google.com/file/d/1W62_W7FxduvwEml0slEsPEfCSnkGkzBQ/view' },
-  '2506032': { mobile: '8667429013', url: 'https://drive.google.com/file/d/1LEplDAmPLEY6eEjSS9spGcAHNXfY8Y0-/view' },
-  '2506033': { mobile: '8925722699', url: 'https://drive.google.com/file/d/1qUjMjSfwb7rBleYS4hgMA6fGr3s6fpm3/view' },
-  '2506034': { mobile: '9840544299', url: 'https://drive.google.com/file/d/1aFGMnkyh0KgZFeORUGSK0KkPwhAZipLX/view' },
-  '2506035': { mobile: '9787257026', url: 'https://drive.google.com/file/d/1WwBqCyCkYE1tufgMjAzzjkcZagpwmgO7/view' },
-  '2506036': { mobile: '9360342020', url: 'https://drive.google.com/file/d/1jLUgfZiFVZeTfS6jz0Afo76kjDeyDaJY/view?usp=drive_link' },
-  '2506237': { mobile: '9361277587', url: 'https://drive.google.com/file/d/1GdoJGs0Qqf_b8auRnz3O24keQFghezk4/view?usp=drive_link' },
-  '2506038': { mobile: '7358486755', url: 'https://drive.google.com/file/d/1CWIWgVZuevj1g0NjVtqeHQ1-yiyEXqQp/view?usp=drive_link' },
-  '2506039': { mobile: '8939653899', url: 'https://drive.google.com/file/d/1l7ELDv6SZ3-2tuLLb0-QVdZqyprXYkcI/view?usp=drive_link' },
-  '2506040': { mobile: '8754809171', url: 'https://drive.google.com/file/d/1lIpPucAdxAaqbd36Pd5mTtGQAPahp6qq/view?usp=drive_link' },
-  '2507001': { mobile: '9342615670', url: 'https://drive.google.com/file/d/1nDX3h3Ejz_xGJjIPTKZcQy535T0m2cB7/view?usp=drive_link' },
-  '2507002': { mobile: '8778636570', url: 'https://drive.google.com/file/d/1e_TV1D2TvBtu7-M1iER1-cEjC9Xc60Sj/view?usp=drive_link' },
-  '2507003': { mobile: '9344427155', url: 'https://drive.google.com/file/d/1hOJaweNN_Un43Zi6OU4p63IPMD9RHxuH/view?usp=drive_link' },
-  '2507004': { mobile: '9952428209', url: 'https://drive.google.com/file/d/1mxCwa1zw06aLP4KHsQ2xaZ97HtipR6lZ/view?usp=drive_link' },
-  '2507005': { mobile: '7845468638', url: 'https://drive.google.com/file/d/1F6gw89IeJCzqq-PFMxx-5nNXMMA9wwwT/view?usp=sharing' },
-  '2507006': { mobile: '7418839359', url: 'https://drive.google.com/file/d/1VtI5H6ivhrVd0_b6aoP0gdY_RAqhOSok/view?usp=drive_link' },
-  '2507007': { mobile: '8977622003', url: 'https://drive.google.com/file/d/1ElCxQUJwsDfskEZDmximn9MOeOnzHjvv/view?usp=drive_link' },
-  '2507008': { mobile: '7550350059', url: 'https://drive.google.com/file/d/1ss7iFZga5-224Mr9qZD5fid2rhmdciBY/view?usp=drive_link' },
-  '2507009': { mobile: '9043399349', url: 'https://drive.google.com/file/d/1NxUQ33E8hexNQLzNutRkXxegbG85BzYN/view?usp=drive_link' },
-  '2507010': { mobile: '7904489400', url: 'https://drive.google.com/file/d/1BTcPfBFo1KCoQQKNoMyrpZD8oKQ6wJtp/view?usp=drive_link' },
-  '2507011': { mobile: '7845196432', url: 'https://drive.google.com/file/d/18ShObXsCuNX7KchS8X5SNItYoeksFf_B/view?usp=drive_link' },
-  '2507012': { mobile: '7200384880', url: 'https://drive.google.com/file/d/1cHKOaYASrFT_FoR9R4q9v9WwI0CnAMri/view?usp=drive_link' },
-  '2507013': { mobile: '8148505241', url: 'https://drive.google.com/file/d/10KqLY2n3JwA4HZNlS3OuokwF1texYh55/view?usp=drive_link' },
-  '2507014': { mobile: '7200411599', url: 'https://drive.google.com/file/d/1KqvWNykgOwWWCpqyoE8-r9Ielzr9Rw1h/view?usp=drive_link' },
-  '2507015': { mobile: '9363733236', url: 'https://drive.google.com/file/d/1rLoU6cz6y8kmULr8hzXiq0kXIqEdvTmS/view?usp=drive_link' },
-  '2507016': { mobile: '9342653869', url: 'https://drive.google.com/file/d/1UZsrxzmuLG04h5N_BNF_olPN8iGeHiZy/view?usp=drive_link' },
-  '2507017': { mobile: '9025626770', url: 'https://drive.google.com/file/d/14lTqQJ516yop5wvxuzQXoU3j1lFBLjO7/view?usp=drive_link' },
-  '2507018': { mobile: '8778987071', url: 'https://drive.google.com/file/d/1ylMfn6ZYQqE3VWeCXiOCFUchqTH6Ac5H/view?usp=drive_link' }
 
-};
 
-      
-    
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      const internId = document.getElementById('internId').value.trim().toUpperCase();
-      const mobile = document.getElementById('mobile').value.trim();
-      const errorDiv = document.getElementById('error');
-
-      if (offerLetterLinks[internId] && offerLetterLinks[internId].mobile === mobile) {
-        window.open(offerLetterLinks[internId].url, '_blank');
-        errorDiv.textContent = '';
-      } else {
-        errorDiv.textContent = 'Invalid Intern ID or Mobile Number';
-      }
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-    <a href="https://wa.me/message/R4PHXDH6IAMWE1" target="_blank" class="whatsapp-assist" title="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-      <span class="assist-text">Need help? Chat with us</span>
-    </a>
-
+                    };
+                    
+                    if (demoData[email]) {
+                        resolve(demoData[email]);
+                    } else {
+                        resolve({
+                            success: false,
+                            message: 'No offer letter found for this email address.'
+                        });
+                    }
+                }, 1500);
+            });
+        }
+    </script>
 </body>
 </html>
